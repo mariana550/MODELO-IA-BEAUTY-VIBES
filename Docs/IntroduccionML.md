@@ -1,4 +1,4 @@
-# Introducción teórica sobre el ciclo de vida de proyectos de Machine Learning
+# 📄Introducción teórica sobre el ciclo de vida de proyectos de Machine Learning
 El ciclo de vida de un proyecto de Machine Learning describe las etapas necesarias para desarrollar un modelo que permita analizar datos y apoyar la toma de decisiones. Este proceso inicia con la identificación de un problema real y finaliza con la evaluación de los resultados obtenidos.
 
 # Las principales etapas del ciclo de vida de ML son:
@@ -14,6 +14,8 @@ Se limpian, transforman y organizan los datos.
 
 **Análisis exploratorio de datos (EDA):**
 Se analizan los datos para encontrar patrones, tendencias y relaciones.
+(ESte proyecto se trabajara solo hasta el EDA porque es fundamental para comprender
+el compartamiento de los datos).
 
 **Modelado:** 
 Se seleccionan y entrenan modelos de ML.
