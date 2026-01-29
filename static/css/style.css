@@ -9,7 +9,7 @@
 body {
   font-family: 'Poppins', Arial, sans-serif;
   background-color: #f2c4d1;
-  color: #333;
+  color: #090909;
 }
 /* =========================
    NAVBAR
@@ -41,14 +41,14 @@ body {
 .banner img,
 .banner {
   width: 100%;
-  margin: 40px 0;
+  margin: 20px 0;
   border-radius: 15px;
 }
 /* =========================
    SECCIÓN INICIO / MODA
 ========================= */
 .section-inicio {
-  padding: 60px 0;
+  padding: 50px 0;
 }
 .moda-card {
   border: none;
@@ -202,7 +202,7 @@ body {
   bottom: 90px;
   right: 20px;
   width: 300px;
-  background: rgb(252, 160, 225);
+  background: rgb(244, 238, 242);
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.2);
   display: none;
@@ -224,7 +224,7 @@ body {
   font-size: 14px;
 }
 .bot-msg {
-  background: #faade3;
+  background: #f39cdc;
   padding: 8px;
   border-radius: 10px;
   margin-bottom: 8px;
@@ -239,14 +239,14 @@ body {
   padding: 10px;
 }
 #send-btn {
-  background: #faa1c6;
+  background: #f39cdc;
   color: white;
   border: none;
   padding: 0 15px;
 }
 .user-msg {
-  background: #fc98c2;
-  color: white;
+  background: #f39cdc;
+  color: rgb(8, 8, 8);
   padding: 8px;
   border-radius: 10px;
   margin-bottom: 8px;

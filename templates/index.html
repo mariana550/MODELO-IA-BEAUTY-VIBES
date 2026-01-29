@@ -10,7 +10,7 @@
     <!-- Font Awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Estilos -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 <!-- NAVBAR -->
@@ -43,7 +43,7 @@
             <!-- Tarjeta 1 -->
             <div class="col-md-6">
                 <div class="card moda-card text-center">
-                    <img src="img/img7.png" alt="banner moda" class="card-img-top img-card">
+                    <img src="{{ url_for('static', filename='img/img7.png') }}" alt="banner moda" class="card-img-top img-card">
                     <div class="card-body5">
                         <h2 class="card-title fw-bold">Tips de Maquillaje</h2>
                         <p class="card-text">Aprende a resaltar tu belleza con nuestros consejos.</p>
@@ -53,7 +53,7 @@
             <!-- Tarjeta 2 -->
             <div class="col-md-6">
                 <div class="card moda-card text-center">
-                    <img src="img/img5.png" alt="banner cuidado" class="card-img-top img-card">
+                    <img src="{{ url_for('static', filename='img/img5.png') }}" alt="banner cuidado" class="card-img-top img-card">
                     <div class="card-body5">
                         <h2 class="card-title fw-bold"> Tips de Cuidado </h2>
                         <p class="card-text">Cuida tu piel y tu cabello de forma correcta.</p>
@@ -66,7 +66,7 @@
 </section>
 <!-- BANNER -->
 <section class="banner">
-<img src="img/img2.png" alt="banner maquillaje" class="banner">
+<img src="{{ url_for('static', filename='img/img2.png') }}" alt="banner maquillaje" class="banner">
 </section>
 <!-- CATEGORÍAS -->
 <section class="category-card">
@@ -77,7 +77,7 @@
             <div class="col-md-6">
                 <a href="#maquillaje" class="text-decoration-none text-dark"> 
                 <div class="card category-card shadow-sm">
-                    <img src="https://st5.depositphotos.com/6844612/67044/i/450/depositphotos_670442080-stock-photo-professional-makeup-tools-makeup-products.jpg" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/cat1.jpg') }}" class="card-img-top">
                     <div class="card-body4 text-center">
                         <h5 class="card-title fw-seminegrita"> Maquillaje </h5>
                     </div>
@@ -87,7 +87,7 @@
             <div class="col-md-6">
                 <a href="#cuidadocapilar"class= "text-decoration-none text-dark">
                 <div class="card category-card shadow-sm">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURYmce3obyRSGH6NlAeTTBzX8_WeZJxaDUw&s" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/cat2.jpg') }}" class="card-img-top">
                     <div class="card-body4 text-center">
                         <h5 class="card-title fw-seminegrita"> Cuidado capilar </h5>
                     </div>
@@ -104,7 +104,7 @@
         <div class="row g-4">
             <div class="col-md-3">
                 <div class="card shadow-sm">
-                    <img src="https://bonitaexpress.co/wp-content/uploads/2024/11/Base-de-maquillaje-fit-me-maybelline.jpg" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/base.webp')}}" class="card-img-top">
                     <div class="card-body3 text-center">
                         <h6>Base Líquida</h6>
                         <p class="fw-bold">$35.000</p>
@@ -115,7 +115,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card shadow-sm">
-                    <img src="https://cdn.shopify.com/s/files/1/0632/5511/8040/files/Labial-Cremoso-Mate-Color.jpg?v=1699052380" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/labial.webp')}}" class="card-img-top">
                     <div class="card-body3 text-center">
                         <h6>Labial Mate</h6>
                         <p class="fw-bold">$25.000</p>
@@ -126,7 +126,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card shadow-sm">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtaWuCHB6dVog8FSIgJFwXtR3_QERR7H9ESQ&s" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/corrector.jpg') }}" class="card-img-top">
                     <div class="card-body3 text-center">
                         <h6> Corrector </h6>
                         <p class="fw-bold">$30.000</p>
@@ -137,7 +137,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card shadow-sm">
-                    <img src="https://s.alicdn.com/@sc04/kf/H83dac7635eb144ad96c7126c7a57d281x.jpg_300x300.jpg" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/rubor.avif') }}" class="card-img-top">
                     <div class="card-body3 text-center">
                         <h6> Rubores </h6>
                         <p class="fw-bold">$18.000</p>
@@ -153,7 +153,7 @@
             <div class="row g-4">
             <div class="col-md-3">
                 <div class="card shadow-sm">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgEzUL0p-dXZeA-1zfmuoxcbfLxcR7w0rULg&s" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/shampoo.jpg') }}" class="card-img-top">
                     <div class="card-body3 text-center">
                         <h6> Shampoo </h6>
                         <p class="fw-bold">$50.000</p>
@@ -164,7 +164,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card shadow-sm">
-                    <img src="https://www.girlymaquillaje.com/wp-content/uploads/Acondicionador-copia-768x960.jpg.webp" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/capilar.webp') }}" class="card-img-top">
                     <div class="card-body3 text-center">
                         <h6> Acondicionador </h6>
                         <p class="fw-bold">$50.000</p>
@@ -175,7 +175,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card shadow-sm">
-                    <img src="https://maticescosmetics.com.co/wp-content/uploads/2022/11/aceite-capilar-elixir-de-oleos-raquel-50-ml-cuidado-cabello-tienda-belleza-cosmeticos-300x300.jpg" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/tonico.jpg') }}" class="card-img-top">
                     <div class="card-body3 text-center">
                         <h6> Tonico capilar </h6>
                         <p class="fw-bold">$45.000</p>
@@ -186,7 +186,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card shadow-sm">
-                    <img src="https://maticescosmetics.com.co/wp-content/uploads/2020/05/tratamiento-capilar-nutritivo-anyeluz-tienda-cosmeticos-maquillaje-cuidado-cabello.jpg" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/trata.jpg') }}" class="card-img-top">
                     <div class="card-body3 text-center">
                         <h6> Tratamiento </h6>
                         <p class="fw-bold">$48.000</p>
@@ -317,7 +317,7 @@
         <button id="send-btn">Enviar</button>
     </div>
 </div>
-<script src="js/chatbot.js"></script>
+<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
