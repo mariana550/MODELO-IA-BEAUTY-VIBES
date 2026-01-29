@@ -34,7 +34,7 @@
     </div>
 </nav>
 <!-- HERO / BANNER -->
-     <img src="img/img1.png" alt="hero-banner" class="img-fluid hero-img">
+     <img src="{{ url_for('static', filename='img/img1.png') }}" alt="hero-banner" class="img-fluid hero-img">
     <!-- BANNER MODA -->
 <section class="section-inicio" id="Inicio">
     <h1 class="display-4 fw-bold text-center mb-5"> Ponte a la moda </h1>
@@ -186,7 +186,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card shadow-sm">
-                    <img src="{{ url_for('static', filename='img/trata.jpg') }}" class="card-img-top">
+                    <img src="{{ url_for('static', filename='img/prd.trata.jpg') }}" class="card-img-top">
                     <div class="card-body3 text-center">
                         <h6> Tratamiento </h6>
                         <p class="fw-bold">$48.000</p>
@@ -272,13 +272,14 @@
     <div class="row text-center text-md-start">
       <!-- LOGO / MARCA -->
       <div class="col-md-4 mb-4">
-        <img src="img/img6.png" alt="logo" width="100%" height="100%">
+        <img src="{{ url_for('static', filename='img/img6.png') }}" alt="logo" width="100%" height="100%">
       </div>
       <!-- Beauty Vibes  -->
       <div class="col-md-4 mb-4">
         <h5 class="footer-title"> Beauty-Vibes </h5>
-         <p>Beauty vibes nacio del amor por el maqillaje y el poder 
-            de la autoexpresion.Comenzamos como un blog lleno de reseñas
+         <p> Beauty vibes nacio del amor por el maqillaje y el poder 
+            de la autoexpresion.
+            Comenzamos como un blog lleno de reseñas
             y tutoriales escritos con pasion,y poco a poco nos transformamos en una 
             plataforma digital dedicada a brinadr los mejor del mundo del maquillaje a miles de 
             personas como tu.
