@@ -207,73 +207,111 @@ body {
 /* =========================
    CHATBOT
 ========================= */
+/* Botón flotante para abrir chat */
 #chat-toggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #f69bc1;
   color: white;
-  padding: 15px;
+  padding: 20px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 24px;
   z-index: 999;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
 }
+#chat-toggle:hover {
+  transform: scale(1.1);
+}
+/* Contenedor principal del chatbot */
 #chatbot {
   position: fixed;
   bottom: 90px;
   right: 20px;
-  width: 300px;
+  width: 400px;         
+  height: 450px;         
   background: rgb(244, 238, 242);
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
   display: none;
   flex-direction: column;
   overflow: hidden;
   z-index: 999;
+  font-family: Arial, sans-serif;
 }
+/* Encabezado del chat */
 .chat-header {
   background: #f39cdc;
   color: white;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
+/* Área de mensajes */
 .chat-body {
-  padding: 10px;
-  height: 220px;
+  padding: 15px;
+  height: 380px;         
   overflow-y: auto;
-  font-size: 14px;
+  font-size: 16px;
+  background: #fff0f7;
 }
+/* Mensajes del bot */
 .bot-msg {
   background: #f39cdc;
-  padding: 8px;
-  border-radius: 10px;
-  margin-bottom: 8px;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
 }
+/* Mensajes del usuario */
+.user-msg {
+  background: #f39cdc;
+  color: #080808;
+  padding: 10px 12px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  text-align: right;
+  align-self: flex-end;
+  word-wrap: break-word;
+}
+/* Pie del chat */
 .chat-footer {
   display: flex;
   border-top: 1px solid #eee;
+  padding: 10px;
+  background: #fff0f7;
 }
+/* Input de texto */
 #chat-input {
   flex: 1;
   border: none;
-  padding: 10px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  outline: none;
+  margin-right: 10px;
 }
+/* Botón de enviar */
 #send-btn {
   background: #f39cdc;
   color: white;
   border: none;
-  padding: 0 15px;
-}
-.user-msg {
-  background: #f39cdc;
-  color: rgb(8, 8, 8);
-  padding: 8px;
+  padding: 0 20px;
+  font-size: 16px;
   border-radius: 10px;
-  margin-bottom: 8px;
-  text-align: right;
+  cursor: pointer;
+  transition: 0.2s;
 }
-
-
+#send-btn:hover {
+  background: #e22db7;
+}
 
