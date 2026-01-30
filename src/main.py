@@ -9,6 +9,8 @@ app = Flask(
     template_folder="../templates",
     static_folder="../static"
 )
+print("GROQ KEY:", os.getenv("GROQ_API_KEY"))
+
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 # HOME
 @app.route("/")
@@ -19,25 +21,25 @@ def index():
 # =========================
 @app.route("/chatbot", methods=["POST"])
 def chatbot():
-    data = request.get_json(silent=True) or {}
-    user_message = data.get("message", "").strip()
-    
+    user_message = request.json.get("message", "")
+
     if not user_message:
         return jsonify({"reply": "¿Puedes repetir tu mensaje? 💕"})
 
     try:
         completion = client.chat.completions.create(
-            model="llama3-8b-8192", #es un modelo rapido y economico
+            model="llama-3.3-70b-versatile",
             messages=[
                 {
-                "role": "system",
-                "content": (
-                "Eres BeautyBot 💄, asistente virtual de Beauty-Vibes Colombia. "
-                "Habla en español colombiano, tono cálido y cercano. "
-                "Responde en máximo 2 frases cortas. "
-                "Usa emojis sutiles (💕✨💄). "
-                "Si preguntan por precios, indica que están visibles en cada producto. "
-                "Envíos a toda Colombia. "
+                    "role": "system",
+                    "content": (
+                        "Eres BeautyBot 💄, asistente virtual de Beauty-Vibes Colombia. "
+                        "Responde en español colombiano, con tono amable y cercano. "
+                        "Máximo 2 frases. Usa emojis sutiles 💕✨. "
+                        "Si preguntan por precios, indica que precios son "
+                        "base 35 000,labial 25 000,corrector 30 000,rubor 18 000"
+                        "shampoo 50 000,acondicionador 50 000,tratamiento 48 000,tonico 45 000"
+                        "Hacemos envíos a toda Colombia."
                     )
                 },
                 {
@@ -48,14 +50,16 @@ def chatbot():
             temperature=0.7,
             max_tokens=120
         )
+        if not completion.choices:
+            return jsonify({"reply": "Hola 💕 ¿En qué puedo ayudarte hoy?"})
 
         reply = completion.choices[0].message.content
         return jsonify({"reply": reply})
 
     except Exception as e:
-        print("Error Groq:", e)
+        print(" ERROR GROQ:", e)
         return jsonify({
-            "reply": "Ups 😥 tuve un problema. Intenta de nuevo más tarde."
+            "reply": "Ups 😥 tuve un problema técnico. Intenta de nuevo en un momento."
         })
 #EJECUCION
 if __name__ == "__main__":
