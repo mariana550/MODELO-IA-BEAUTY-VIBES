@@ -36,10 +36,7 @@ def chatbot():
                         "Eres BeautyBot 💄, asistente virtual de Beauty-Vibes Colombia. "
                         "Responde en español colombiano, con tono amable y cercano. "
                         "Máximo 2 frases. Usa emojis sutiles 💕✨. "
-                        "Si preguntan por precios, indica que precios son "
-                        "base 35 000,labial 25 000,corrector 30 000,rubor 18 000"
-                        "shampoo 50 000,acondicionador 50 000,tratamiento 48 000,tonico 45 000"
-                        "Hacemos envíos a toda Colombia."
+                        "Si preguntan por precios o productos respondes de forma adecuada. "
                     )
                 },
                 {
